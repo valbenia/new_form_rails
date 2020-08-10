@@ -23,8 +23,8 @@
       text-align: center;
   }
   .button_log{
-      height: 100dp;
-      width:  100dp;
+      height: 40px;
+      width:  100px;
   }
   table, th, td {
     border: 1px solid black;

@@ -1,5 +1,6 @@
 <% if !@form.name[0].nil? %>
   <h1>List Parttime form</h1>
+  <div margin: 0 auto>
   <table>
     <tr>
       <th>id</th>
@@ -19,6 +20,7 @@
       </tr>
     <% end %>
   </table>
+  </div>
  <% end %> 
 <br>
 <%= link_to 'Add', new_parttime_url %>

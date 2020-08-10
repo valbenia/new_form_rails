@@ -8,7 +8,7 @@
         <%= link_to 'Click me to fill form', parttimes_path %>
     <% end %>
 <% else %>
-    <%= button_to "Login", '/login', method: :get%>
+    <%= button_to "Login", '/login', method: :get,class:'button_log'%>
     <br> 
     <%= button_to("Sign Up", '/users/new', method: :get,class:'button_log')%>
 <%end%>
