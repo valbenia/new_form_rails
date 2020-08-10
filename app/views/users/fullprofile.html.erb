@@ -1,0 +1,29 @@
+<h1><%=current_user.typed%> profile</h1>
+<h2> Userame: <%= current_user.username%></h2>
+<%= form_with scope: :form,url: fullprofile_path, local: true do |form| %>
+    <p>
+        <%= form.label :Name %><br>
+        <%= form.text_field :name %>
+    </p>
+    <p>
+    <%= form.label :Company %><br>
+    <%= form.text_field :company %>
+  </p>
+ 
+  <p>
+      <%= form.label :TaxCode %><br>
+      <%= form.text_field :taxcode %>
+  </p>
+  <p>
+      <%= form.label :Address %><br>
+      <%= form.text_field :address %>
+  </p>
+  <p>
+      <%= form.label :Position %><br>
+      <%= form.text_field :position %>
+  </p>
+  <p>
+    <%= form.submit "Save"%>    
+  </p>
+
+<% end %>

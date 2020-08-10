@@ -1,0 +1,3 @@
+class Parttimeform < ApplicationRecord
+    
+end

@@ -1,0 +1,14 @@
+<h1 class = "center">Welcome!</h1>
+<% if logged_in? %>
+    <h1>You are Logged In, <%= current_user_name %></h1>
+    <%= link_to 'Click me to logout', logout_path, method: :post %>
+    <% if current_user.typed == "fulltime" %><br>
+        <%= link_to 'Click me to fill form', forms_path %>
+    <% else %><br>
+        <%= link_to 'Click me to fill form', parttimes_path %>
+    <% end %>
+<% else %>
+    <%= button_to "Login", '/login', method: :get%>
+    <br> 
+    <%= button_to("Sign Up", '/users/new', method: :get,class:'button_log')%>
+<%end%>

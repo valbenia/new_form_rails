@@ -1,0 +1,22 @@
+<H1> New fulltime form </H1>
+<%= form_with scope: :form,url: forms_path, local: true do |form| %>   
+    <p>
+        <%= form.label :Date %><br>
+        <%= form.date_field :date %>
+    </p>
+    <p>
+        <%= form.label :Content %><br>
+        <%= form.text_field :content %>
+    </p>
+    <p>
+        <%= form.label :income %><br>
+        <%= form.text_field :income%>
+    </p>
+    <p>
+      <%= form.submit "add"%>    
+
+    </p>
+    <p>
+        <%= link_to 'Show', forms_path %>
+    </p>
+  <% end %>

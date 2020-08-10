@@ -1,0 +1,27 @@
+<% if !@form.name[0].nil? %>
+  <h1>List Parttime form</h1>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>date</th>
+      <th>customer</th>
+      <th>income</th>
+      <th>note</th>
+    </tr>
+  
+    <% @form.each do |form| %>
+      <tr>
+        <td><%= form.id %></td>
+        <td><%= form.date %></td>
+        <td><%= form.customer %></td>
+        <td><%= form.income %></td>
+        <td><%= form.note %></td>
+      </tr>
+    <% end %>
+  </table>
+ <% end %> 
+<br>
+<%= link_to 'Add', new_parttime_url %>
+<p>
+  <%= link_to 'Home', welcome_path, method: :get %>
+<p>

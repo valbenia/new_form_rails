@@ -1,0 +1,30 @@
+<H1> New Parttime form </H1>
+<%= form_with scope: :form,url: parttimes_path, local: true do |form| %> 
+    <p>
+        <%= form.label :Date %><br>
+        <%= form.date_field :date %>
+    </p>
+    <p>
+        <%= form.label :Customer %><br>
+        <%= form.text_field :customer %>
+    </p>
+    <p>
+        <%= form.label :Description %><br>
+        <%= form.text_field :description %>
+    </p>
+    <p>
+        <%= form.label :Income %><br>
+        <%= form.text_field :income%>
+    </p>
+        <p>
+        <%= form.label :Note %><br>
+        <%= form.text_field :note%>
+    </p>
+    <p>
+      <%= form.submit "add"%>    
+
+    </p>
+    <p>
+        <%= link_to 'Show', parttimes_path %>
+    </p>
+  <% end %>

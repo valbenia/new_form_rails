@@ -1,0 +1,22 @@
+<h1><%=current_user.typed%> profile</h1>
+<h2> Userame: <%= current_user.username%></h2>
+<%= form_with scope: :form,url: partprofile_path, local: true do |form| %>
+  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+      <%= form.label :Time %><br>
+      <%= form.text_field :time %>
+  </p>
+  <p>
+      <%= form.label :Job %><br>
+      <%= form.text_field :Job %>
+  </p>
+
+  <p>
+    <%= form.submit "add"%>    
+  </p>
+
+<% end %>

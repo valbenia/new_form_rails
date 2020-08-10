@@ -1,0 +1,2 @@
+class Partprofile < ApplicationRecord
+end

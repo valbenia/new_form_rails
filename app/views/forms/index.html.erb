@@ -1,0 +1,26 @@
+<% if @form.length != 0 %>
+  <h1>List form</h1>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>date</th>
+      <th>content</th>
+      <th>income</th>
+    </tr>
+  
+    <% @form.each do |form| %>
+      <tr>
+        <td><%= form.id %></td>
+        <td><%= form.date %></td>
+        <td><%= form.content %></td>
+        <td><%= form.income %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %> 
+<p>
+  <%= link_to 'add', new_form_url %>
+</p>
+<p>
+  <%= link_to 'Home', welcome_path, method: :get %>
+<p>

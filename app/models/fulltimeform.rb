@@ -1,0 +1,2 @@
+class Fulltimeform < ApplicationRecord
+end
