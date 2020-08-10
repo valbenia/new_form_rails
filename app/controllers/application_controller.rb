@@ -15,6 +15,9 @@ class ApplicationController < ActionController::Base
             Fullprofile.find_by(username: user.username).name
         end
     end
+    def admin_in?
+        current_user.username === 'admin'
+    end
     def logged_in?
        
         !current_user.nil?
